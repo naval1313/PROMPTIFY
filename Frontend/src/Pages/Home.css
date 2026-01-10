@@ -1,0 +1,223 @@
+/* Full Background */
+.home-container {
+  height: 100vh;
+  width: 100%;
+  background: black; /* ChatGPT light grey background */
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+/* NAVBAR */
+.home-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 40px;
+  background: none;
+}
+
+.home-logo {
+  font-size: 22px;
+  font-weight: 600;
+  color: #111;
+}
+.home-logo img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Navbar Buttons */
+.home-nav-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.home-btn {
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.login-btn {
+  background: transparent;
+  border: 1px solid #ccc;
+}
+
+.login-btn:hover {
+  background: #e5e5e5;
+}
+
+.signup-btn {
+  background: #10a37f; /* ChatGPT green */
+  color: white;
+}
+
+.signup-btn:hover {
+  background: #0e906f;
+}
+
+/* HERO SECTION */
+.home-hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.home-title {
+  font-size: 38px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.home-subtitle {
+  font-size: 18px;
+  color: #444;
+  max-width: 600px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+/* Get Started Button */
+.home-start-btn {
+  padding: 10px 30px;
+  font-size: 21px;
+  font-weight: 600;
+  border-radius: 24px;
+  cursor: pointer;
+  border: 2px solid #00ffc8;
+  text-decoration: none;
+  margin-top: 32px;
+
+  /* Default look */
+  background: #00ffc8;
+  color: #001f1d;
+
+  transition: all 0.35s ease;
+  box-shadow: 0 0 20px rgba(0, 255, 200, 0.4);
+}
+
+a {
+  text-decoration: none;
+}
+
+.home-start-btn:hover {
+  background: black;
+  color: #00ffc8;
+  box-shadow: 0 0 25px rgba(0, 255, 200, 0.6);
+  transform: scale(1.07);
+}
+
+/* Common Button Styling */
+.home-btn {
+  padding: 10px 22px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  border: 2px solid #00ffc8;
+  cursor: pointer;
+
+  /* Default look */
+  color: #00ffc8;
+  background: #001f1d;
+
+  transition: all 0.35s ease;
+  box-shadow: 0 0 15px rgba(0, 255, 200, 0.35);
+  display: inline-block;
+}
+
+/* Hover Effect */
+.home-btn:hover {
+  color: black;
+  background: #00ffc8;
+  transform: scale(1.07);
+  box-shadow: 0 0 25px rgba(0, 255, 200, 0.55);
+}
+
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  /* Navbar */
+  .home-nav {
+    padding: 14px 20px;
+  }
+
+  .home-logo img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .home-nav-buttons {
+    gap: 8px;
+  }
+
+  .home-btn {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+  /* Hero Section */
+  .home-hero {
+    padding: 0 16px;
+  }
+
+  .home-title {
+    font-size: 30px;
+  }
+
+  .home-subtitle {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .home-start-btn {
+    font-size: 18px;
+    padding: 10px 26px;
+  }
+}
+
+/* SMALL MOBILE (Phones) */
+
+@media (max-width: 480px) {
+  /* Navbar stack */
+  .home-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .home-nav-buttons {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .home-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Hero text */
+  .home-title {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+
+  .home-subtitle {
+    font-size: 15px;
+  }
+
+  .home-start-btn {
+    width: 100%;
+    max-width: 280px;
+    font-size: 17px;
+  }
+}

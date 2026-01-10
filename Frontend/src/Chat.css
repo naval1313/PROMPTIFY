@@ -1,0 +1,53 @@
+.chats {
+  flex: 1;
+  max-width: 700px;
+  margin: auto;
+  overflow-y: auto; /*this adds scrollbar to scroll down chats */
+  padding: 5rem 1rem 2rem;
+  padding-top: 5rem;
+
+  /* smooth scrolling */
+  scroll-behavior: smooth;
+
+  scrollbar-width: thin;
+  scrollbar-color: #666 transparent;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 255, 179, 0.4) transparent;
+}
+.chats::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.userDiv {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9rem;
+}
+
+.gptDiv {
+  text-align: left;
+  font-size: 0.9rem;
+  color: #eafffa;
+}
+
+.userMessage {
+  background-color: #323232;
+  padding: 10px 20px;
+  border-radius: 14px;
+  margin-left: 15rem;
+  max-width: 500px;
+  width: fit-content;
+  margin-left: 0;
+  max-width: 70%;
+  background: linear-gradient(145deg, #121c19, #0b1210);
+  box-shadow: 0 0 25px rgba(0, 255, 179, 0.12);
+}
+
+.hljs {
+  border-radius: 14px; /*hljs is a syntx highlighter in JS, this made a curve border to the code part of Gpt*/
+}
+
+pre {
+  white-space: pre-wrap;
+}
+

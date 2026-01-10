@@ -1,0 +1,109 @@
+/* ========== SIDEBAR ========== */
+.sidebar {
+  width: 300px;
+  height: 100vh;
+  background: #171717;
+  color: #b4b4b4;
+
+  display: flex;
+  flex-direction: column;
+
+  position: relative; /* 👈 desktop */
+  transform: none;
+}
+
+/* ========== NEW CHAT BUTTON ========== */
+.sidebar button {
+  margin: 12px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background: transparent;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 255, 179, 0.35);
+  box-shadow: 0 0 12px rgba(0, 255, 179, 0.35);
+  cursor: pointer;
+}
+
+.sidebar button:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.logo {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+/* ========== HISTORY ========== */
+.history {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.history li {
+  list-style: none;
+  padding: 6px 8px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  border-radius: 8px;
+  position: relative;
+}
+
+.history li:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.highlighted {
+  background: rgba(0, 255, 179, 0.35);
+}
+
+/* Trash */
+.fa-trash {
+  position: absolute;
+  right: 8px;
+  opacity: 0;
+}
+
+.history li:hover .fa-trash {
+  opacity: 1;
+}
+
+/* ========== FOOTER ========== */
+.sign {
+  margin-top: auto; /*real footer behaviour */
+  text-align: center;
+  padding: 12px 10px;
+  font-size: 13px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.25); /* white line */
+  background: #171717; /* sidebar se match */
+}
+
+/* ========== MOBILE SIDEBAR ========== */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 260px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+}
+
+/* Overlay */
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 900;
+}
