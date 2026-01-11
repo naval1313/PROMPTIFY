@@ -1,4 +1,5 @@
 import "./Home.css";
+import LogoImage from "../assets/openai.png";
 
 import { Link } from "react-router-dom";
 
@@ -8,7 +9,7 @@ function Home() {
       {/* NAVBAR */}
       <div className="home-nav">
         <div className="home-logo">
-          <img src="src/assets/openai.png" alt="gpt logo" className="logo" />
+          <img src={LogoImage} alt="LogoImg" className="logo" />
         </div>
 
         <div className="home-nav-buttons">
@@ -29,8 +30,8 @@ function Home() {
           Your personal AI assistant — chat, explore, and create anything.
         </p>
 
-        <Link to="/signup"> 
-         <button className="home-start-btn">Get Started</button>
+        <Link to="/signup">
+          <button className="home-start-btn">Get Started</button>
         </Link>
       </div>
     </div>
