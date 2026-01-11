@@ -9,7 +9,17 @@ function Home() {
       {/* NAVBAR */}
       <div className="home-nav">
         <div className="home-logo">
-          <img src={LogoImage} alt="LogoImg" className="logo" />
+          <img
+            src={LogoImage}
+            alt="LogoImg"
+            style={{
+              width: "140px",
+              height: "auto",
+              border: "3px solid red",
+              position: "relative",
+              zIndex: 9999,
+            }}
+          />
         </div>
 
         <div className="home-nav-buttons">
