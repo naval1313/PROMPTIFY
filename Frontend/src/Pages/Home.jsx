@@ -1,5 +1,4 @@
 import "./Home.css";
-import LogoImage from "../assets/openai.png";
 
 import { Link } from "react-router-dom";
 
@@ -9,17 +8,7 @@ function Home() {
       {/* NAVBAR */}
       <div className="home-nav">
         <div className="home-logo">
-          <img
-            src={LogoImage}
-            alt="LogoImg"
-            style={{
-              width: "140px",
-              height: "auto",
-              border: "3px solid red",
-              position: "relative",
-              zIndex: 9999,
-            }}
-          />
+          <i class="fa-solid fa-p"></i>
         </div>
 
         <div className="home-nav-buttons">
