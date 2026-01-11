@@ -1,6 +1,8 @@
 import "./Home.css";
 
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faP } from "@fortawesome/free-solid-svg-icons";
 
 function Home() {
   return (
@@ -8,7 +10,7 @@ function Home() {
       {/* NAVBAR */}
       <div className="home-nav">
         <div className="home-logo">
-          <i class="fa-solid fa-p"></i>
+          <FontAwesomeIcon icon={faP}/>
         </div>
 
         <div className="home-nav-buttons">

@@ -2,6 +2,8 @@ import "./Sidebar.css";
 import { useState } from "react";
 import { useContext, useEffect } from "react";
 import { MyContext } from "./MyContext";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faP } from "@fortawesome/free-solid-svg-icons";
 
 function Sidebar({ isOpen, closeSidebar }) {
   const {
@@ -123,7 +125,7 @@ function Sidebar({ isOpen, closeSidebar }) {
       <section className={`sidebar ${isOpen ? "open" : ""}`}>
         {/* New Chat button */}
         <button onClick={createNewChat}>
-          <i class="fa-solid fa-p"></i>
+          <FontAwesomeIcon icon={faP}/>
           <span className="CreateNewChat"> New Chat </span>
           <i>
             <span>
