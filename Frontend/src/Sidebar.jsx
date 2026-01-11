@@ -25,11 +25,14 @@ function Sidebar({ isOpen, closeSidebar }) {
     if (!token) return; //STOP API CALL
 
     try {
-      const response = await fetch( `${import.meta.env.VITE_API_URL}/api/thread` , {
-        headers: {
-          Authorization: `Bearer ${token}`, //token send kr rhe he
-        },
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/thread`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`, //token send kr rhe he
+          },
+        }
+      );
 
       if (!response.ok) return;
       const res = await response.json();
@@ -120,7 +123,7 @@ function Sidebar({ isOpen, closeSidebar }) {
       <section className={`sidebar ${isOpen ? "open" : ""}`}>
         {/* New Chat button */}
         <button onClick={createNewChat}>
-          <img src="src/assets/openai.png" alt="gpt logo" className="logo" />
+          <i class="fa-solid fa-p"></i>
           <span className="CreateNewChat"> New Chat </span>
           <i>
             <span>
