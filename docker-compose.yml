@@ -1,0 +1,15 @@
+services:
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:5173"          # left = your computer, right = inside container
+    depends_on:
+      - backend
+
+  backend:
+    build: ./backend
+    ports:
+      - "8080:8080"          # change 8080 if your backend uses different port
+    env_file:
+      - ./backend/.env       # if you have .env file
